@@ -62,6 +62,24 @@ namespace WindowsFormsApp1
             {
                 Console.WriteLine("{0,5}", bo);
             }
+            /*for (int i = 0; i < 3; i++)
+            {
+                
+            }*/
+            if (arrayLed[0])
+                label3.BackColor = Color.FromArgb(255, 210, 210);
+            else
+                label3.BackColor = Color.FromArgb(5, 10, 0);
+
+            if (arrayLed[1])
+                label4.BackColor = Color.FromArgb(255, 210, 210);
+            else
+                label4.BackColor = Color.FromArgb(5, 10, 0);
+
+            if (arrayLed[2])
+                label5.BackColor = Color.FromArgb(255, 210, 210);
+            else
+                label5.BackColor = Color.FromArgb(5, 10, 0);
         }
     }
 }
