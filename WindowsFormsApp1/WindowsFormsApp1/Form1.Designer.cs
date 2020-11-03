@@ -37,6 +37,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.text_ip = new System.Windows.Forms.TextBox();
+            this.text_port = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -71,18 +76,19 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(657, 151);
+            this.button3.Location = new System.Drawing.Point(657, 88);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "connect";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 28F);
-            this.label2.Location = new System.Drawing.Point(481, 134);
+            this.label2.Location = new System.Drawing.Point(481, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 38);
             this.label2.TabIndex = 2;
@@ -92,7 +98,7 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(488, 175);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(244, 165);
+            this.richTextBox1.Size = new System.Drawing.Size(244, 98);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
             // 
@@ -129,14 +135,62 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "label5";
             // 
+            // text_ip
+            // 
+            this.text_ip.Location = new System.Drawing.Point(488, 118);
+            this.text_ip.Name = "text_ip";
+            this.text_ip.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.text_ip.Size = new System.Drawing.Size(100, 21);
+            this.text_ip.TabIndex = 9;
+            this.text_ip.Text = "127.0.0.1";
+            // 
+            // text_port
+            // 
+            this.text_port.Location = new System.Drawing.Point(488, 145);
+            this.text_port.Name = "text_port";
+            this.text_port.Size = new System.Drawing.Size(100, 21);
+            this.text_port.TabIndex = 10;
+            this.text_port.Text = "9090";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(594, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(16, 12);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "IP";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(594, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 12);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "PORT";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(488, 279);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(244, 137);
+            this.richTextBox2.TabIndex = 5;
+            this.richTextBox2.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.text_port);
+            this.Controls.Add(this.text_ip);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -161,6 +215,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox text_ip;
+        private System.Windows.Forms.TextBox text_port;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 
