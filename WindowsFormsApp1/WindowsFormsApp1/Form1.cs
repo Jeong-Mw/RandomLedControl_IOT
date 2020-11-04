@@ -47,63 +47,38 @@ namespace WindowsFormsApp1
             }
 
         }
-        public void RandomArray(Random d1, bool[] result)
-        {
-            byte[] b1 = new byte[3];
-            d1.NextBytes(b1);
-
-            for (int i = 0; i <3; i++)
-            {
-                if (b1[i]%2==0)
-                {
-                    result[i] = true;
-                }
-                else
-                {
-                    result[i] = false;
-                }
-            }
-            Console.WriteLine();
-
-            arrayLed = result;
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            char result;
+
             Random r1 = new Random();
+            int rInt = r1.Next(0, 3);
 
-            RandomArray(r1, arrayLed);
+            Console.WriteLine(rInt);
 
-            foreach(bool bo in arrayLed)
+
+            label3.BackColor = Color.FromArgb(5, 10, 0);
+            label4.BackColor = Color.FromArgb(5, 10, 0);
+            label5.BackColor = Color.FromArgb(5, 10, 0);
+
+            if (rInt==0)
             {
-                Console.WriteLine("{0,5}", bo);
+                result = 'R';
+                label3.BackColor = Color.FromArgb(255, 0, 0);
             }
-            /*for (int i = 0; i < 3; i++)
+            else if (rInt==1)
             {
-                
-            }*/
-            if (arrayLed[0])
-                label3.BackColor = Color.FromArgb(255, 210, 210);
-            else
-                label3.BackColor = Color.FromArgb(5, 10, 0);
-
-            if (arrayLed[1])
-                label4.BackColor = Color.FromArgb(255, 210, 210);
-            else
-                label4.BackColor = Color.FromArgb(5, 10, 0);
-
-            if (arrayLed[2])
-                label5.BackColor = Color.FromArgb(255, 210, 210);
-            else
-                label5.BackColor = Color.FromArgb(5, 10, 0);
-
-
-            string result = "";
-
-            foreach (bool led in arrayLed)
-            {
-                result += led.ToString();
+                result = 'G';
+                label4.BackColor = Color.FromArgb(0, 255, 0);
             }
+            else
+            {
+                result = 'B';
+                label5.BackColor = Color.FromArgb(0, 0, 255);
+            }
+
+
             byte[] message = Encoding.UTF8.GetBytes(result.ToString());
             string string1 = result.ToString();
             //서버와는 다른 방법으로 string을 전달해 봤다 그냥 공부하는겹 해봤다..
