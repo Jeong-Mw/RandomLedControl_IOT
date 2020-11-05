@@ -142,7 +142,7 @@
             this.text_ip.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.text_ip.Size = new System.Drawing.Size(100, 21);
             this.text_ip.TabIndex = 9;
-            this.text_ip.Text = "127.0.0.1";
+            this.text_ip.Text = "192.168.0.41";
             // 
             // text_port
             // 
